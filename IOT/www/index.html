@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Barra de navegacion con listas desordenadas y ordenadas -->
+
+<head>
+
+  <!-- Importamos hojas de estilo de materialize (framework (herramientas de trabajo) que contiene las prpiedades css para que a traves de las clases "class="" permita un diseño material design) -->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Permite diseño responsive o diseño web adaptable. Filosofía de diseño
+cuyo objetivo es adaptar la apariencia de las páginas web al dispositivo
+que se esté utilizando. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Permite la codificacion de caracteres -->
+  <meta charset="utf-8">
+
+  <!-- Titular en pestaña -->
+  <title>NavBar</title>
+</head>
+
+
+<body>
+  <!-- Aqui comienza la barra de navegacion -->
+  <!-- Etiqueta nav -->
+  <nav class="nav-extended">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">NotiApp</a>
+
+
+
+
+      <!-- Boton despliega Barra lateral (solo en moviles) 
+<a href="#" data-activates="mobile-demo" class="button-collapse">  <i class="large material-icons">dehaze</i></a>
+
+<!-- Aqui inicia la barra de navegacion extendida con listas ordenadas -->
+      <ul class="right hide-on-med-and-down">
+
+
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Pasteles</a></li>
+        <li><a href="#">Helados</a></li>
+        <li><a href="#">Dulces</a></li>
+        <li><a href="#">Contactenos</a></li>
+      </ul>
+
+      <ul id="slide-out" class="side-nav">
+        <li>
+          <div class="user-view">
+            <div class="background">
+              <img src="images/office.jpg">
+            </div>
+            <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
+            <a href="#!name"><span class="white-text name">John Doe</span></a>
+            <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+          </div>
+        </li>
+        <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+        <li><a href="#!">Second Link</a></li>
+        <li>
+          <div class="divider"></div>
+        </li>
+        <li><a class="subheader">Subheader</a></li>
+        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+      </ul>
+      <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+  <!--
+<ul class="side-nav" id="mobile-demo">          
+<nav><li><div class="input-field">
+<input id="search" type="search" required>
+<label class="label-icon" for="search"><i class="material-icons">search</i></label>
+</div></li> </nav>
+
+<li><a href="#">Instituto Perfect School</a></li>
+<li><a href="#">Estadísticas de ruido</a></li>
+<li><a href="physics.php">Laboratorio de fisíca</a></li>
+<li><a href="php/calc.php">Calculadora</a></li>
+<li><a href="php/updown_files.php">Sincronización</a></li>
+<li><a href="#">Ajustes</a></li>
+<li><a href="#">Facebook</a></li>
+<li><a href="#">Instagram</a></li>
+<li><a href="#">Twitter</a></li>
+<li><a href="#">Acerca de nosotros</a></li>
+</ul>
+</div>
+
+-->
+
+
+
+
+
+  <br>
+  <div class="row">
+    <div class="col s12 m6">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">Carta</span>
+          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+        </div>
+        <div class="card-action">
+          <a href="#">This is a link</a>
+          <a href="#">This is a link</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s12 m6">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">Carta para LuisMi</span>
+          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+        </div>
+        <div class="card-action">
+          <a href="#">This is a link</a>
+          <a href="#">This is a link</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
+            
+
+
+  <!-- Importamos librerias Javascript Candy-query.js para uso de codigo
+Javascript especial, y materialize.js para el uso del framework CSS: "materialize" -->
+  <script src="js/jquery.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <!-- Codigo Javascript que permite el
+desplazamiento animado de la barra lateral -->
+
+  <script>
+    $(".button-collapse").sideNav();
+  </script>
+</body>
+</html>
