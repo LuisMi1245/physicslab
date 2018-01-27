@@ -109,9 +109,9 @@ $result = $conexion->query($sql);
       <table>
         <div class="green">
 
-          <div class="row">
+<div class="container">
+           <div class="row">
             <div class="z-depth-2">
-
               <div class="card blue-grey darken-1">
                 <div class="card-content white-text">
                   <span class="card-title">Otras magnitudes</span>
@@ -133,9 +133,10 @@ $result = $conexion->query($sql);
               </div>
             </div>
           </div>
+</div>
 
 
-
+<div class="container">  
           <div class="row">
             <div class="z-depth-2">
               <div class="card blue-grey darken-1">
@@ -178,13 +179,15 @@ $result = $conexion->query($sql);
               </div>
             </div>
           </div>
+</div>
+
 
           <footer class="page-footer green">
             <div class="container">
               <div class="row">
                 <div class="col l6 s12">
                   <h5 class="white-text">Laboratorio de física.<br>(Creative Commons)</h5>
-                  <p class="grey-text text-lighten-4">Derechos de autor: © VicmanMakers 2018.</p>
+                  <p class="grey-text text-lighten-4">Derechos de autor: (CC) VicmanMakers 2018.</p>
                   <p>Cualquier contenido asociado a la plataforma PhysicslAB, se atribuyen respectivamente los derechos de autor correspondientes a los desarrolladores del contenido y plataforma.</p>
                 </div>
                 <div class="col l4 offset-l2 s12">
@@ -200,7 +203,7 @@ $result = $conexion->query($sql);
             </div>
             <div class="footer-copyright">
               <div class="container">
-                © 2018 Copyright VicmanMakers
+                 2018 (CC) VicmanMakers
                 <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
               </div>
             </div>
