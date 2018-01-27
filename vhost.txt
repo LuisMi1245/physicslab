@@ -1,0 +1,19 @@
+NameVirtualHost *:80
+
+<VirtualHost *:80>
+	ServerAdmin creators@lab.com
+	DocumentRoot "C:/xampp/htdocs/"
+	ServerName localhost
+	ErrorLog "logs/creators-host.com-error.log"
+  	CustomLog "logs/creators-host.com-access.log" common
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "C:/xampp/htdocs/"
+    ServerName www.creators.lab
+    ServerAlias creators.lab
+    <Directory "C:/xampp/htdocs/">
+        Order allow,deny
+        Allow from all
+    </Directory>
+</VirtualHost>
