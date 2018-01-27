@@ -1,4 +1,7 @@
 <?php
+
+date_default_timezone_set('America/Bogota');
+
 function redondear($valor_a_truncar, $decimales){
 switch ($decimales) {
 case 1:

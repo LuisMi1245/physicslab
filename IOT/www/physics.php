@@ -17,8 +17,10 @@ $numRows = $objPHPExcel->setActiveSheetIndex(0)->getHighestRow();
   <html>
 
   <head>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+    <link href="fonts/icons/MaterialIcons-Regular.woff" rel="stylesheet">
+    <link href="fonts/icons/MaterialIcons-Regular.woff2" rel="stylesheet">
+    <link href="css/icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.min.css">
     <title>Fisica Lab</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -31,49 +33,52 @@ $numRows = $objPHPExcel->setActiveSheetIndex(0)->getHighestRow();
     <nav class="nav-extended green">
       <div class="nav-wrapper">
 
-        <a href="physics.php" class="brand-logo flow-text">PhysicslAB</a>
+        <a href="physics.php" class="brand-logo flow-text center">PhysicslAB</a>
 
 
 
 
         <!-- Aqui inicia la barra de navegacion extendida con listas ordenadas -->
         <ul class="right hide-on-med-and-down">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="#">Pasteles</a></li>
-          <li><a href="#">Helados</a></li>
-          <li><a href="#">Dulces</a></li>
-          <li><a href="#">Contactenos</a></li>
+          <li><a href="physics.php">Inicio</a></li>
+          <li><a href="proyecto.html">Proyecto</a></li>
+          <li><a href="acerca_de_nosotros">Nosotros</a></li>
+          <li><a href="partcipantes.html">Participantes</a></li>
+          <li><a href="instructivo.html">Instructivo</a></li>
         </ul>
 
 
+        <div class="row">
+          <div class="col s12">
 
-        <ul id="slide-out" class="side-nav">
-          <li>
-            <div class="user-view">
-              <div class="background">
-                <img src="images/verde.png">
-              </div>
-              <a href="#!user"><img class="circle" src="images/yuna.png"></a>
-              <a href="#!name"><span class="white-text name">I.E Victoria Manzur</span></a>
-              <a href="#!email"><span class="white-text email">fanny.guarin16@gmail.com</span></a>
-            </div>
-          </li>
-          <li><a href="physicsdev.php">Hacer conversión</a></li>
-          <li><a class="waves-effect" href="#!">Actividades propuestas</a></li>
-          <li>
-            <div class="divider"></div>
-          </li>
-          <li><a class="subheader">Síganos</a></li>
-          <li><a href="acerca_de_nosotros.html"><i class="material-icons">cloud</i>Acerca de nosotros</a></li>
-          <li><a href="proyecto.html"><i class="material-icons">cloud</i>Proyecto PhysicslAB</a></li>
-          <li><a href="partcipantes.html"><i class="material-icons">cloud</i>Participantes</a></li>
-          <li><a href="instructivo.html"><i class="material-icons">cloud</i>Instructivo</a></li>
-        </ul>
-        <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-      </div>
+            <ul id="slide-out" class="side-nav">
+              <li>
+                <div class="user-view">
+                  <div class="background">
+                    <img src="images/verde.png">
+                  </div>
+                  <a href="#!user"><img class="circle" src="images/yuna.png"></a>
+                  <a href="#!name"><span class="white-text name">I.E Victoria Manzur</span></a>
+                  <a href="#!email"><span class="white-text email">fanny.guarin16@gmail.com</span></a>
+                </div>
+              </li>
+              <li><a href="physicsdev.php">Hacer conversión</a></li>
+              <li><a class="waves-effect" href="#!">Actividades propuestas</a></li>
+              <li>
+                <div class="divider"></div>
+              </li>
+              <li><a class="subheader">Síganos</a></li>
+              <li><a href="acerca_de_nosotros.html"><i class="material-icons">cloud</i>Acerca de nosotros</a></li>
+              <li><a href="proyecto.html"><i class="material-icons">cloud</i>Proyecto PhysicslAB</a></li>
+              <li><a href="partcipantes.html"><i class="material-icons">cloud</i>Participantes</a></li>
+              <li><a href="instructivo.html"><i class="material-icons">cloud</i>Instructivo</a></li>
+            </ul>
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+          </div>
     </nav>
+    </div>
 
-
+    </div>
 
 
     <!-- Physics lab proceso -->
@@ -89,6 +94,7 @@ $numRows = $objPHPExcel->setActiveSheetIndex(0)->getHighestRow();
       </thead>
       <tbody>
         <?php
+require 'fisicalab/funcion.php';
 for ($i = 1; $i <= $numRows; $i++) {
 $sql;
 $Sensor = $objPHPExcel->getActiveSheet()->getCell('A'.$i)->getCalculatedValue();
@@ -109,9 +115,9 @@ $result = $conexion->query($sql);
 ?>
       </tbody>
     </table>
+    <br>
     <div class="green">
       <br>
-
 
       <div class="container ">
         <div class="row">
@@ -217,7 +223,11 @@ $result = $conexion->query($sql);
     <script src="js/jquery.js"></script>
     <script src="js/materialize.min.js"></script>
     <script>
-      $(".button-collapse").sideNav();
+      $(".button-collapse").sideNav({
+        menuWidth: 280,
+
+
+      });
     </script>
   </body>
 

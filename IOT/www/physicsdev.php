@@ -2,7 +2,10 @@
 <html>
 
 <head>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link href="fonts/icons/MaterialIcons-Regular.woff" rel="stylesheet">
+  <link href="fonts/icons/MaterialIcons-Regular.woff2" rel="stylesheet">
+  <link href="css/icons.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
   <meta charset=utf-8>
   <meta name=description content="">
@@ -13,18 +16,16 @@
 <body>
   <nav class="nav-extended green">
     <div class="nav-wrapper">
-      <a href="physics.php" class="brand-logo flow-text">PhysicslAB</a>
+      <a href="physics.php" class="brand-logo flow-text center">PhysicslAB</a>
 
 
       <!-- Aqui inicia la barra de navegacion extendida con listas ordenadas -->
       <ul class="right hide-on-med-and-down">
-
-
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="#">Pasteles</a></li>
-        <li><a href="#">Helados</a></li>
-        <li><a href="#">Dulces</a></li>
-        <li><a href="#">Contactenos</a></li>
+        <li><a href="physics.php">Inicio</a></li>
+        <li><a href="proyecto.html">Proyecto</a></li>
+        <li><a href="acerca_de_nosotros">Nosotros</a></li>
+        <li><a href="partcipantes.html">Participantes</a></li>
+        <li><a href="instructivo.html">Instructivo</a></li>
       </ul>
 
 
@@ -58,30 +59,30 @@
 
 
 
-  <div class="container">
-
-
-    <ul class="collapsible" data-collapsible="accordion">
-      <li>
-        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Velocidades:</div>
-        <div class="collapsible-body">
 
 
 
-          <!-- Physics lab proceso -->
-          <table class="highlight centered responsive-table flow-text white">
+  <ul class="collapsible" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Velocidades:</div>
+      <div class="collapsible-body">
 
-            <thead class="z-depth-2">
-              <tr>
-                <th style="font-size: 18px">Datos</th>
-                <th style="font-size: 18px">Magnitud</th>
-                <th style="font-size: 18px">Sensor</th>
-                <th style="font-size: 18px">Fecha</th>
-              </tr>
-            </thead>
-            <tbody>
 
-              <?php
+
+        <!-- Physics lab proceso -->
+        <table class="highlight centered responsive-table flow-text white">
+
+          <thead class="z-depth-2">
+            <tr>
+              <th style="font-size: 18px">Datos</th>
+              <th style="font-size: 18px">Magnitud</th>
+              <th style="font-size: 18px">Sensor</th>
+              <th style="font-size: 18px">Fecha</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <?php
 require 'fisicalab/conexion.php'; //Agregamos la conexión|
 require 'fisicalab/funcion.php';
 
@@ -137,21 +138,20 @@ echo '</tr>';
 
 include("fisicalab/cerrar_conexion.php");
 ?>
-            </tbody>
-          </table>
-        </div>
-      </li>
+          </tbody>
+        </table>
+      </div>
+    </li>
 
-      <li>
-        <div class="collapsible-header"><i class="material-icons">place</i>Aceleración:</div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-      </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">place</i>Aceleración:</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
 
-    </ul>
-
-  </div>
+  </ul>
 
 
+  <br>
   <div class="green">
 
     <br>
