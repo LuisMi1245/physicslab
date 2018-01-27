@@ -61,43 +61,45 @@
 
   <div id="flow-text" class="card-panel flow-text">
     <p>
-     PhysicslAB está basado en el lenguaje de programación del lado del servidor "PHP" (Hypertext Preprocessor) y la fórmula "Wampp". Por consiguiente, Apache, MySQL/MariaDB --> PhpMyAdmin (Gestor de base de datos) y Php, son el stack o las tecnologías que se requieren para correr PhysicslAB a la perfección.
-<br><br>
-    Al ser este un dispositivo que pretende funcionar bajo el concepto "Internet Of Things", requiere ejecutar software adicional como por ejemplo: aplicaciones Java, y librerias de comunicación con el IDE de Arduino (Entorno de desarrollo Integrado), a la placa de prototipado Arduino.
+      PhysicslAB está basado en el lenguaje de programación del lado del servidor "PHP" (Hypertext Preprocessor) y la fórmula "Wampp". Por consiguiente, Apache, MySQL/MariaDB --> PhpMyAdmin (Gestor de base de datos) y Php, son el stack o las tecnologías que
+      se requieren para correr PhysicslAB a la perfección.
+      <br><br> Al ser este un dispositivo que pretende funcionar bajo el concepto "Internet Of Things", requiere ejecutar software adicional como por ejemplo: aplicaciones Java, y librerias de comunicación con el IDE de Arduino (Entorno de desarrollo
+      Integrado), a la placa de prototipado Arduino.
 
-    <blockquote>
-      <p>PhysicslAB está optimizado parcialmente para dispositivos móviles (android, IOS, etc...), en algunos dispositivos de grandes resoluciones, puede causar errores visuales.</p>
-    </blockquote>
-<hr>
-<span>Algoritmo de ejecución:</span>
-  <ol>
-    <li>La placa de prototipado Arduino debe estar preparada para interpretar instrucciones y generar procesos de entrada o salida.</li>
-    <li>Los datos obtenidos en el monitor serial (IDE Arduino Monitor), serán seleccionados con el programa "Conexion.java" que este a su vez, los exportará a un archivo ".xlsx" (hoja de cálculo). </li>
-    <blockquote>
-      <p>Tenga en cuenta que para que todo funciones a la perfección, los ficheros deben mantener estrictamente el nombre y la ruta asignada, en este caso, la hoja de calculo debe llamarse "datos.xlsx", ya que un script en PHP procederá a tomar los datos y enviarlos a una base de datos. Si su archivo no tiene el nombre indicado, deberá cambiarlo. </p>
-    </blockquote>
-    <li>La librería de uso abierto "ExcelPHP" se encargará de leer los datos interseccionados (filas y columnas) de forma automática.</li>
-    <li>Los scripts "conexion.php" y "cerrar_conexion.php" se encargarán de conectarse a la base de datos del proyecto, en este caso, el usuario root a "localhost/phpmyadmin", para luego reescribir los datos en una nueva base de datos llamada "lectura_exclec" y respectivamente su tabla llamada "datos".</li>
-    <blockquote>
-      <p>Tenga en cuenta que este proceso es automático, y el tiempo de ejecución es de 1 segundo o menos (según la capacidad de procesamiento del servidor). Es decir, cualquier error, espacio en blanco, datos faltantes, pueden ser ocasionados por modificaciones mal hechas en el código fuente, archivos con nombres irrelevantes o que no concuerdan con los asignados, errores en la plataforma Wampp, etc...</p>
-    </blockquote>
-    <li>Luego, se ejecutarán operaciones matemáticas que realizan el cálculo de las magnitudes generadas por los sensores o variables, y estas se mostrarán de forma organizada y estructurada, en pantalla y representadas en tablas.</li>
-  </ol>
-<br>
-Si usted no entiende el proceso, NO modifique el código fuente. Puede reportar el error, exigir mantenimiento y obtener tutoría, enviando un correo eléctronico a: <br>
-<ul>
-  <li>---> creatorslabmonteria@gmail.com
-</li>
-<li>---> luismiguelbuendia.07@gmail.com
-</li>
-<li>
----> fanny.guarin16@gmail.com
-</li>
-<br>
-O entrando a nuestro repositorio en Github, donde se almacena una copia original del proyecto, en:
-<li>---><a>https://github.com/LuisMi1245/physicslab</a></li>
-</ul>
-Con gusto atenderemos y actualizaremos la plataforma ;-)
+      <blockquote>
+        <p>PhysicslAB está optimizado parcialmente para dispositivos móviles (android, IOS, etc...), en algunos dispositivos de grandes resoluciones, puede causar errores visuales.</p>
+      </blockquote>
+      <hr>
+      <span>Algoritmo de ejecución:</span>
+      <ol>
+        <li>La placa de prototipado Arduino debe estar preparada para interpretar instrucciones y generar procesos de entrada o salida.</li>
+        <li>Los datos obtenidos en el monitor serial (IDE Arduino Monitor), serán seleccionados con el programa "Conexion.java" que este a su vez, los exportará a un archivo ".xlsx" (hoja de cálculo). </li>
+        <blockquote>
+          <p>Tenga en cuenta que para que todo funciones a la perfección, los ficheros deben mantener estrictamente el nombre y la ruta asignada, en este caso, la hoja de calculo debe llamarse "datos.xlsx", ya que un script en PHP procederá a tomar los datos
+            y enviarlos a una base de datos. Si su archivo no tiene el nombre indicado, deberá cambiarlo. </p>
+        </blockquote>
+        <li>La librería de uso abierto "ExcelPHP" se encargará de leer los datos interseccionados (filas y columnas) de forma automática.</li>
+        <li>Los scripts "conexion.php" y "cerrar_conexion.php" se encargarán de conectarse a la base de datos del proyecto, en este caso, el usuario root a "localhost/phpmyadmin", para luego reescribir los datos en una nueva base de datos llamada "lectura_exclec"
+          y respectivamente su tabla llamada "datos".</li>
+        <blockquote>
+          <p>Tenga en cuenta que este proceso es automático, y el tiempo de ejecución es de 1 segundo o menos (según la capacidad de procesamiento del servidor). Es decir, cualquier error, espacio en blanco, datos faltantes, pueden ser ocasionados por modificaciones
+            mal hechas en el código fuente, archivos con nombres irrelevantes o que no concuerdan con los asignados, errores en la plataforma Wampp, etc...</p>
+        </blockquote>
+        <li>Luego, se ejecutarán operaciones matemáticas que realizan el cálculo de las magnitudes generadas por los sensores o variables, y estas se mostrarán de forma organizada y estructurada, en pantalla y representadas en tablas.</li>
+      </ol>
+      <br> Si usted no entiende el proceso, NO modifique el código fuente. Puede reportar el error, exigir mantenimiento y obtener tutoría, enviando un correo eléctronico a: <br>
+      <ul>
+        <li>---> creatorslabmonteria@gmail.com
+        </li>
+        <li>---> luismiguelbuendia.07@gmail.com
+        </li>
+        <li>
+          ---> fanny.guarin16@gmail.com
+        </li>
+        <br> O entrando a nuestro repositorio en Github, donde se almacena una copia original del proyecto, en:
+        <li>---><a>https://github.com/LuisMi1245/physicslab</a></li>
+      </ul>
+      Con gusto atenderemos y actualizaremos la plataforma ;-)
 
     </p>
   </div>
