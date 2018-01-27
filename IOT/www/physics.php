@@ -31,7 +31,7 @@ $numRows = $objPHPExcel->setActiveSheetIndex(0)->getHighestRow();
     <nav class="nav-extended green">
       <div class="nav-wrapper">
 
-        <a href="index.html" class="brand-logo flow-text">PhysicslAB</a>
+        <a href="physics.php" class="brand-logo flow-text">PhysicslAB</a>
 
 
 
@@ -64,9 +64,10 @@ $numRows = $objPHPExcel->setActiveSheetIndex(0)->getHighestRow();
             <div class="divider"></div>
           </li>
           <li><a class="subheader">Síganos</a></li>
-          <li><a href="#!"><i class="material-icons">cloud</i>Acerca de nosotros</a></li>
-          <li><a href="#!"><i class="material-icons">cloud</i>Proyecto PhysicslAB</a></li>
-          <li><a href="#!"><i class="material-icons">cloud</i>Participantes</a></li>
+          <li><a href="acerca_de_nosotros.html"><i class="material-icons">cloud</i>Acerca de nosotros</a></li>
+          <li><a href="proyecto.html"><i class="material-icons">cloud</i>Proyecto PhysicslAB</a></li>
+          <li><a href="partcipantes.html"><i class="material-icons">cloud</i>Participantes</a></li>
+          <li><a href="instructivo.html"><i class="material-icons">cloud</i>Instructivo</a></li>
         </ul>
         <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
       </div>
