@@ -1,15 +1,14 @@
-<?php
-require 'fisicalab/inserccion_datos.php';
-?>
 
-  <!DOCTYPE html>
+<!DOCTYPE html>
   <html>
   <head>
     <link rel="stylesheet" href="css/icons.css">
     <link rel="stylesheet" href="css/materialize.min.css">
     <title>Laboratorio de física</title>
-		<meta name="viewport" content=" width = device-width, initial-scale = 1.0"/>
-  </head>
+    <meta name="viewport" content=" width = device-width, initial-scale = 1.0"/>
+    <script src="js/jquery.js"></script>
+    <script src="refresh_ajax.js"></script>
+</head>
 
   <body>
     <nav class="nav-extended green">
@@ -57,6 +56,8 @@ require 'fisicalab/inserccion_datos.php';
     </div>
     </div>
 
+   
+
 <!--PhysicslAB Btón-->
 <!-- Physics lab proceso -->
 <table class="highlight centered responsive-table flow-text white">
@@ -68,19 +69,20 @@ require 'fisicalab/inserccion_datos.php';
           <th style="font-size: 18px">Fecha</th>
         </tr>
       </thead>
-      <tbody>
-			<div id="data_recibida">
 
+      <tbody id="contenido">
+      <!--id="datos_json"   script src="ajax.js"></script-->
 
-			</div>
-		</tbody>
-		</table>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-
-<div class="center">
-		<input type="button" value="verificar" id="b_erificar">
-</div>
+<?php
+require 'lectura.php'; 
+?>
+</tbody>
+</table>
 <br>
+<br>
+
+<input class="center" id="miboton" type="button" value="Guardar Datos *" />
+<div id="carga"> </div>
     <div class="green">
       <br>
 
@@ -184,15 +186,21 @@ require 'fisicalab/inserccion_datos.php';
         </div>
       </footer>
 
-		</div>
+<script type="text/javascript">
+    $(document).ready(function(){			
+			$("#miboton").on("click", function(e){
+				e.preventDefault();
+                $("#carga").load("fisicalab/inserccion_datos.php");              
+			});
+		});
+    
+</script>
+<script src="js/materialize.min.js"></script>
+<script>
 
-		<script src="js/jquery.js"></script>
-		<script src="js/ajax.js"></script>
-    <script src="js/materialize.min.js"></script>
-    <script>
       $(".button-collapse").sideNav({
         menuWidth: 280,
       });
-    </script>
+</script>
   </body>
   </html>

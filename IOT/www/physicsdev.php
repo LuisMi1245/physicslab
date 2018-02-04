@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 
   <link href="fonts/icons/MaterialIcons-Regular.woff" rel="stylesheet">
@@ -73,7 +72,7 @@
             </tr>
           </thead>
           <tbody>
-            <?php require 'fisicalab/query_exp_2.php';?>
+          <?php require 'fisicalab/query_exp_2.php';?>
           </tbody>
         </table>
       </div>
