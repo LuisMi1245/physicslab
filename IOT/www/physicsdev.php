@@ -57,21 +57,13 @@
   </nav>
   <br>
 
-
-
-
-
-
   <ul class="collapsible" data-collapsible="accordion">
     <li>
       <div class="collapsible-header"><i class="material-icons">filter_drama</i>Velocidades:</div>
       <div class="collapsible-body">
 
-
-
         <!-- Physics lab proceso -->
         <table class="highlight centered responsive-table flow-text white">
-
           <thead class="z-depth-2">
             <tr>
               <th style="font-size: 18px">Datos</th>
@@ -81,79 +73,19 @@
             </tr>
           </thead>
           <tbody>
-
-            <?php
-require 'fisicalab/conexion.php'; //Agregamos la conexión|
-require 'fisicalab/funcion.php';
-
-$res = mysqli_query($conexion,"SELECT*FROM datos  WHERE Sensor='Infrar_1_2'") or die(mysqli_error()); 
-
-while ($consulta = mysqli_fetch_array($res)) {  
-$rows['0'] = $consulta['Dato'];
-$rows['1'] = $consulta['Sensor'];
-} 
-$tiempo['0']= $rows['0'];
-$sensor['0']= $rows['1'];
-$res = mysqli_query($conexion,"SELECT*FROM datos  WHERE Sensor='Infrarojo 2 y 3'") or die(mysqli_error()); 
-while ($consulta = mysqli_fetch_array($res)) {  
-$rows['0'] = $consulta['Dato'];
-$rows['1'] = $consulta['Sensor'];
-} 
-$tiempo['1'] = $rows['0'];
-$sensor['1']= $rows['1'];
-$res = mysqli_query($conexion,"SELECT*FROM datos  WHERE Sensor='Infrarojo 3 y 4'") or die(mysqli_error()); 
-while ($consulta = mysqli_fetch_array($res)) {  
-$rows['0'] = $consulta['Dato'];
-$rows['1'] = $consulta['Sensor'];
-}
-$tiempo['2'] = $rows['0'];
-$sensor['2']= $rows['1'];
-$res = mysqli_query($conexion,"SELECT*FROM datos  WHERE Sensor='Infrarojo 4 y 5'") or die(mysqli_error()); 
-while ($consulta = mysqli_fetch_array($res)) {  
-$rows['0'] = $consulta['Dato'];
-$rows['1'] = $consulta['Sensor'];
-} 
-$tiempo['3'] = $rows['0'];
-$sensor['3']= $rows['1'];
-
-$distancia = array(0.30,0.43,0.26,0.25);
-$velocidad = array();
-$respuesta = array();
-
-for ($i = 0; $i < 4 ; $i++) {
-  $velocidad[$i]=$distancia[$i]/$tiempo[$i];
-}
-for ($i = 0; $i < 4 ; $i++) {
-  $respuesta[$i] = redondear($velocidad[$i],1);
-}
-$magnitud='Velocidad';
-for ($i = 0; $i < 4; $i++) {
-echo '</tr>';
-echo '<td>'. $respuesta[$i].' cm/s'.'</td>';
-echo '<td>'.$magnitud.'</td>';  
-echo '<td>'.$sensor[$i].'</td>';
-echo '<td>'. $time = date("H:i a - j M").'</td>';
-echo '</tr>';
-}
-
-include("fisicalab/cerrar_conexion.php");
-?>
+            <?php require 'fisicalab/query_exp_2.php';?>
           </tbody>
         </table>
       </div>
     </li>
-
     <li>
       <div class="collapsible-header"><i class="material-icons">place</i>Aceleración:</div>
       <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
     </li>
-
   </ul>
 
-
-  <br>
-  <div class="green">
-
+    <br>
+    <div class="green">
     <br>
     <div class="container">
       <div class="row">
@@ -185,7 +117,7 @@ include("fisicalab/cerrar_conexion.php");
           <div class="card blue-grey darken-1 card-panel hoverable">
             <div class="card-content white-text">
               <span class="card-title"> 
-<hr>Consejos y actividades</span>
+            <hr>Consejos y actividades</span>
               <hr>
               <br>
               <p class="flow-text">Consejos:
@@ -266,5 +198,4 @@ include("fisicalab/cerrar_conexion.php");
       });
     </script>
 </body>
-
 </html>

@@ -1,48 +1,26 @@
 <?php
-require 'fisicalab/Classes/PHPExcel/IOFactory.php'; //Agregamos la librería 
-require 'fisicalab/conexion.php'; //Agregamos la conexión
-
-//Variable con el nombre del archivo
-$nombreArchivo = 'fisicalab/datos.xlsx';
-// Cargo la hoja de cálculo
-$objPHPExcel = PHPExcel_IOFactory::load($nombreArchivo);
-
-//Asigno la hoja de calculo activa
-$objPHPExcel->setActiveSheetIndex(0);
-//Obtengo el numero de filas del archivo
-$numRows = $objPHPExcel->setActiveSheetIndex(0)->getHighestRow();
+require 'fisicalab/inserccion_datos.php';
 ?>
 
   <!DOCTYPE html>
   <html>
-
   <head>
-    <link href="fonts/icons/MaterialIcons-Regular.woff" rel="stylesheet">
-    <link href="fonts/icons/MaterialIcons-Regular.woff2" rel="stylesheet">
-    <link href="css/icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/icons.css">
     <link rel="stylesheet" href="css/materialize.min.css">
-    <title>Fisica Lab</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Permite la codificacion de caracteres -->
-    <meta charset="utf-8">
-
+    <title>Laboratorio de física</title>
+		<meta name="viewport" content=" width = device-width, initial-scale = 1.0"/>
   </head>
 
   <body>
     <nav class="nav-extended green">
       <div class="nav-wrapper">
-
         <a href="physics.php" class="brand-logo flow-text center">PhysicslAB</a>
-
-
-
 
         <!-- Aqui inicia la barra de navegacion extendida con listas ordenadas -->
         <ul class="right hide-on-med-and-down">
           <li><a href="physics.php">Inicio</a></li>
           <li><a href="proyecto.html">Proyecto</a></li>
-          <li><a href="acerca_de_nosotros">Nosotros</a></li>
+          <li><a href="acerca_de_nosotros.html">Nosotros</a></li>
           <li><a href="partcipantes.html">Participantes</a></li>
           <li><a href="instructivo.html">Instructivo</a></li>
         </ul>
@@ -77,13 +55,11 @@ $numRows = $objPHPExcel->setActiveSheetIndex(0)->getHighestRow();
           </div>
     </nav>
     </div>
-
     </div>
 
-
-    <!-- Physics lab proceso -->
-
-    <table class="highlight centered responsive-table flow-text white">
+<!--PhysicslAB Btón-->
+<!-- Physics lab proceso -->
+<table class="highlight centered responsive-table flow-text white">
       <thead class="z-depth-2">
         <tr>
           <th style="font-size: 18px">Sensor</th>
@@ -93,29 +69,18 @@ $numRows = $objPHPExcel->setActiveSheetIndex(0)->getHighestRow();
         </tr>
       </thead>
       <tbody>
-        <?php
-require 'fisicalab/funcion.php';
-for ($i = 1; $i <= $numRows; $i++) {
-$sql;
-$Sensor = $objPHPExcel->getActiveSheet()->getCell('A'.$i)->getCalculatedValue();
-$Dato = $objPHPExcel->getActiveSheet()->getCell('B'.$i)->getCalculatedValue();
-$Magnitud = $objPHPExcel->getActiveSheet()->getCell('C'.$i)->getCalculatedValue();  
+			<div id="data_recibida">
 
-echo '<tr>';
-echo '<td>'. $Sensor.'</td>';
-echo '<td>'. $Dato.' Seg</td>';
-echo '<td>'. $Magnitud.'</td>';
-echo '<td>'. $time = date("H:i a - j M");
-echo '</tr>';
 
-$sql = "INSERT INTO datos(Sensor, Dato, Magnitud) VALUES('$Sensor','$Dato','$Magnitud')";
-$result = $conexion->query($sql);
-} include("fisicalab/cerrar_conexion.php");
+			</div>
+		</tbody>
+		</table>
+<br><br><br><br><br><br><br><br><br><br><br><br>
 
-?>
-      </tbody>
-    </table>
-    <br>
+<div class="center">
+		<input type="button" value="verificar" id="b_erificar">
+</div>
+<br>
     <div class="green">
       <br>
 
@@ -151,7 +116,7 @@ $result = $conexion->query($sql);
           <div class="z-depth-2">
             <div class="card blue-grey darken-1 card-panel hoverable">
               <div class="card-content white-text">
-                <span class="card-title"> 
+                <span class="card-title">
 <hr>Consejos y actividades</span>
                 <hr>
                 <br>
@@ -219,16 +184,15 @@ $result = $conexion->query($sql);
         </div>
       </footer>
 
-    </div>
-    <script src="js/jquery.js"></script>
+		</div>
+
+		<script src="js/jquery.js"></script>
+		<script src="js/ajax.js"></script>
     <script src="js/materialize.min.js"></script>
     <script>
       $(".button-collapse").sideNav({
         menuWidth: 280,
-
-
       });
     </script>
   </body>
-
   </html>
