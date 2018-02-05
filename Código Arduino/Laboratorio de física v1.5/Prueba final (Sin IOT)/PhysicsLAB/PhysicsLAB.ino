@@ -6,14 +6,14 @@
   //Se define y setea el display LCD.
   LiquidCrystal_I2C lcd(0x3F, 16, 2);
 
-//Se definen los sensores de infrarojo, teniendo en cuenta el puerto a utilizar.
+//Definir sensores
 infrarrojo estado(13); //DEFINICION DEL PIN DEL ARDUINO A USAR
 infrarrojo estado2(12); //DEFINICION DEL PIN DEL ARDUINO A USAR
 infrarrojo estado3(11); //DEFINICION DEL PIN DEL ARDUINO A USAR
-infrarrojo estado4(10); //DEFINICION DEL PIN DEL ARDUINO A USAR
-infrarrojo estado5(9); //DEFINICION DEL PIN DEL ARDUINO A USAR
-infrarrojo estado6(8); //DEFINICION DEL PIN DEL ARDUINO A USAR
-infrarrojo estado7(7); //DEFINICION DEL PIN DEL ARDUINO A USAR
+infrarrojo estado4(7); //DEFINICION DEL PIN DEL ARDUINO A USAR // SENSOR 7 = 4
+infrarrojo estado5(8); //DEFINICION DEL PIN DEL ARDUINO A USAR // SENSOR 6 = 5
+infrarrojo estado6(9); //DEFINICION DEL PIN DEL ARDUINO A USAR // SENSOR 5 = 6
+infrarrojo estado7(10); //DEFINICION DEL PIN DEL ARDUINO A USAR// SENSOR 4 = 7
 
 //Inicializamos variables que se usarán como parámetro.
 int VALOR, VALOR2, VALOR3, VALOR4, VALOR5, VALOR6, VALOR7;
