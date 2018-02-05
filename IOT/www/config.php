@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 
@@ -35,7 +37,6 @@
 
 
 
-
       <ul id="slide-out" class="side-nav">
         <li>
           <div class="user-view">
@@ -65,29 +66,42 @@
 
 
   <div id="flow-text" class="card-panel flow-text">
-    <p>
-      PhysicslAB, es un laboratorio de cálculo práctico para aplicaciones escolares, enfocado en temáticas relacionadas con el área de física.
-    </p>
-    <p>
-      Este proyecto fue hecho desde cero, por estudiantes de grado décimo de la institución educativa: "Victoria Manzur", con arduos conocimientos en ciencias de la computación y ciencias naturales; docentes, semilleros pertenecientes a Vivelab Montería, y
-      empresas enfatizadas al desarrollo de sotware.
-      <br><br> Entre los participantes:
-      <ol>
-        <li>Vivelab Montería.</li>
-        <li>I.E Victoria Manzur.</li>
-        <li>VicmanMakers (Semillero).</li>
-        <li>AXYZ Montería (Empresa de Software).</li>
-        <li>CreatorslAB Montería (Comunidad Educativa sin fin de lucro).</li>
-      </ol>
-      <br> El código fuente del proyecto se aloja en el siguiente repositorio de Github:
-      <br> --> <a>https://github.com/LuisMi1245/physicslab</a>
-      <br><br>
-      <blockquote>
-        <p>El código fuente puede ser reutilizado, modificado y/o actualizado, siempre y cuando los créditos del autor estén presentes.
-        </p>
-      </blockquote>
+    <blockquote>
+    <small>Si los datos que se muestran en pantalla, <em>no son correctos</em> o como usted esperaba, escriba la contraseña (solicete al administrador), y  presione el botón <u>COMENZAR DE NUEVO</u>.
+</small>
+    </blockquote>
 
-    </p>
+
+    <div class="row">
+        <form action="config.php" method="POST" class="col s12">
+            <div class="input-field col s12">
+                <input name="ingreso" id="password" type="password" class="validate">
+            <label for="password">Contraseña</label>
+            </div>
+            <input id="miboton2"class="btn waves-effect waves-light green" type="submit" value="COMENZAR DE NUEVO"/></input>
+        </form>
+    </div>
+
+
+    <?php
+if($_POST){
+$pass = $_POST['ingreso'];
+$key = "fisicalab12345";
+
+if($pass == $key){
+
+require 'fisicalab/Conexion.php';
+$sql = "TRUNCATE TABLE datos";        
+$conexion = new Conexion();
+$cnn = $conexion->getConexion();
+$statement = $cnn->query($sql); 
+require 'fisicalab/cerrar_conexion.php';
+echo '<p>Se han eliminado correctamente los registros de la base de datos. <i class="material-icons">check</i></p>';
+}else{
+    echo '<p>Contraseña incorrecta <i class="material-icons">close</i></p>';
+}}
+?>
+
   </div>
 
   <footer class="page-footer green">
@@ -116,8 +130,8 @@
       </div>
     </div>
   </footer>
+  
 
-  </div>
   <script src="js/jquery.js"></script>
   <script src="js/materialize.min.js"></script>
   <script>
@@ -126,3 +140,5 @@
 </body>
 
 </html>
+
+

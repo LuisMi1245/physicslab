@@ -45,10 +45,12 @@
                 <div class="divider"></div>
               </li>
               <li><a class="subheader">Síganos</a></li>
-              <li><a href="acerca_de_nosotros.html"><i class="material-icons">cloud</i>Acerca de nosotros</a></li>
-              <li><a href="proyecto.html"><i class="material-icons">cloud</i>Proyecto PhysicslAB</a></li>
-              <li><a href="partcipantes.html"><i class="material-icons">cloud</i>Participantes</a></li>
-              <li><a href="instructivo.html"><i class="material-icons">cloud</i>Instructivo</a></li>
+              <li><a href="acerca_de_nosotros.html"><i class="material-icons">account_circle</i>Acerca de nosotros</a></li>
+              <li><a href="proyecto.html"><i class="material-icons">book</i>Proyecto PhysicslAB</a></li>
+              <li><a href="partcipantes.html"><i class="material-icons">face</i>Participantes</a></li>
+              <li><a href="instructivo.html"><i class="material-icons">laptop_windows</i>Instructivo</a></li>
+              <li><a href="config.php"><i class="material-icons">settings</i>Configuración</a></li>
+              
             </ul>
             <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
           </div>
@@ -81,8 +83,11 @@ require 'lectura.php';
 <br>
 <br>
 
-<input class="center" id="miboton" type="button" value="Guardar Datos *" />
+<button class="btn waves-effect waves-light green" id="miboton" type="button" onClick="Materialize.toast('Se han guardado correctamente', 4000)"/>Guardar Datos *<i class="material-icons right">send</i></button>
+
+<button class="btn waves-effect waves-light green left-align" id="miboton2" type="button" onClick="window.location.href='physicsdev.php'"/>Hacer Conversión<i class="material-icons right">autorenew</i></button>
 <div id="carga"> </div>
+    
     <div class="green">
       <br>
 

@@ -24,5 +24,5 @@ for ($i = 1; $i <= $numRows; $i++) {
         $statement = $cnn->query($sql); 
 }
 include("cerrar_conexion.php");
-echo "Los datos han sido guardados correctamente, puede continuar el experimento."
+
 ?>
