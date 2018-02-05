@@ -172,14 +172,14 @@ void loop() {
     TiempoInicio = 0;
     TiempoActual = 0;
     TiempoInicio = millis();
-    Serial.print("Tiempo transcurrido Tramo Inicial: ");
-    Serial.print(TiempoTranscurrido);
-    Serial.println(" ms");
+    //Serial.print("Tiempo transcurrido Tramo Inicial: ");
+    //Serial.print(TiempoTranscurrido);
+    //Serial.println(" ms");
     tiempo_3 = float(TiempoTranscurrido) / 1000; // Conversion de milisegundos a segundos.
     velocidad_3 = distancia_3 / tiempo_3; // Calculo de velocidad
-    Serial.print("La velocidad inicial es de: ");
-    Serial.print(velocidad_3);
-    Serial.println("cm/seg");
+    //Serial.print("La velocidad inicial es de: ");
+    //Serial.print(velocidad_3);
+    //Serial.println("cm/seg");
     //aceleracion_1=(velocidad_3-velocidad_2)/tiempo_3;
 
     while (estado_sensor_6 == 1) { //Ciclo de espera mientras que se detecta algo en el quinto sensor.
@@ -198,18 +198,18 @@ void loop() {
     TiempoInicio = 0;
     TiempoActual = 0;
     TiempoInicio = millis();
-    Serial.print("Tiempo transcurrido Tramo Final: ");
-    Serial.print(TiempoTranscurrido);
-    Serial.println(" ms");
+    //Serial.print("Tiempo transcurrido Tramo Final: ");
+    //Serial.print(TiempoTranscurrido);
+    //Serial.println(" ms");
     tiempo_4 = float(TiempoTranscurrido) / 1000; // Conversion de milisegundos a segundos.
     velocidad_4 = distancia_4 / tiempo_4; // Calculo de velocidad
-    Serial.print("La velocidad final es de: ");
-    Serial.print(velocidad_4);
-    Serial.println("cm/seg");
+    //Serial.print("La velocidad final es de: ");
+    //Serial.print(velocidad_4);
+    //Serial.println("cm/seg");
     aceleracion_1 = (velocidad_4 - velocidad_3) / (tiempo_4 + tiempo_3);
-    Serial.print("La aceleracion es de: ");
-    Serial.print(aceleracion_1);
-    Serial.println("cm/seg^2");
+    //Serial.print("La aceleracion es de: ");
+    //Serial.print(aceleracion_1);
+    //Serial.println("cm/seg^2");
     lcd.clear();
     lcd.print("T1 = ");
     lcd.print(tiempo_3);
