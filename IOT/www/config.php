@@ -21,7 +21,7 @@
   <nav class="nav-extended green">
     <div class="nav-wrapper">
 
-      <a href="physics.php" class="brand-logo flow-text center">PhysicslAB</a>
+      <a href="physics.php" class="brand-logo flow-text center hoverable">PhysicslAB</a>
 
 
 
@@ -66,8 +66,24 @@
 
 
   <div id="flow-text" class="card-panel flow-text">
+      <p>
+<blockquote>
+    <small>Si no ha montado manualmente una base de datos para la instalación, hágalo escribiendo la contraseña (solicite al administrador) y presione el botón <u>MONTAR BASE DE DATOS</u>.</small>
+</blockquote>
+<div class="row">
+        <form action="fisicalab/config_2.php" method="POST" class="col s12">
+            <div class="input-field col s12">
+                <input name="montarDB" id="password" type="password" class="validate">
+            <label for="password">Contraseña</label>
+            </div>
+            <input id="miboton2"class="btn waves-effect waves-light green" type="submit" value="MONTAR BASE DE DATOS"/></input>
+        </form>
+    </div>
+</p>
+<br>
+
     <blockquote>
-    <small>Si los datos que se muestran en pantalla, <em>no son correctos</em> o como usted esperaba, escriba la contraseña (solicete al administrador), y  presione el botón <u>COMENZAR DE NUEVO</u>.
+    <small>Si los datos que se muestran en pantalla, <em>no son correctos</em> o como usted esperaba, escriba la contraseña (solicite al administrador) y  presione el botón <u>COMENZAR DE NUEVO</u>.
 </small>
     </blockquote>
 
@@ -83,13 +99,12 @@
     </div>
 
 
-    <?php
+<?php
 if($_POST){
 $pass = $_POST['ingreso'];
 $key = "fisicalab12345";
 
 if($pass == $key){
-
 require 'fisicalab/Conexion.php';
 $sql = "TRUNCATE TABLE datos";        
 $conexion = new Conexion();
@@ -140,5 +155,3 @@ echo '<p>Se han eliminado correctamente los registros de la base de datos. <i cl
 </body>
 
 </html>
-
-

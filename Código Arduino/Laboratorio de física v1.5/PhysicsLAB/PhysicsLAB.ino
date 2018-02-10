@@ -127,89 +127,69 @@ void loop() {
     //Serial.print(velocidad_2);
     //Serial.println("m/s");
 
-    //MOSTRANDO EN WEB 
-    boolean Key = false;
-    int mensaje = 0;
-    if (Serial.available() > 0) {
-      mensaje = Serial.read();
-      if (mensaje == '1') {
-        Key = true;
-      } else {
-        Key = false;
-      }
-    }
-    if (Key == true) {
 
-
-      Serial.println(tiempo_1);
-      Serial.println(tiempo_2);
-      //MOSTRAR SIGUIENTES VARIABLES
-      Serial.println(velocidad_1);
-      Serial.println(velocidad_2);
-
-    }
   }
 
-  estado_sensor_7 = estado7.lectura(VALOR7); // Lectura del sensor 7.
-  if (estado_sensor_7 == 0) //Condicional para activar o no el experimento de Aceleracion.
+  estado_sensor_4 = estado4.lectura(VALOR4); // Lectura del sensor 4.
+  if (estado_sensor_4 == 0) //Condicional para activar o no el experimento de Aceleracion.
   {
     //   Serial.println("Comienzo del Experimento de Aceleracion");
     lcd.clear();
     lcd.print("COMIENZA YA");
     lcd.setCursor(0, 1);
     lcd.print("(#2) ACELERACION");
-    estado_sensor_6 = 1;
+    estado_sensor_5 = 1;
     unsigned long TiempoInicio = 0; // variables de tiempo
     unsigned long TiempoActual = 0; // variables de tiempo
     unsigned long TiempoTranscurrido = 0; // variables de tiempo
     TiempoInicio = millis();
-    while (estado_sensor_6 == 1) { //Ciclo de espera mientras que se detecta algo en el sexto sensor.
-      estado_sensor_6 = estado6.lectura(VALOR6); // Lectura del sensor 6.
+    while (estado_sensor_5 == 1) { //Ciclo de espera mientras que se detecta algo en el sexto sensor.
+      estado_sensor_5 = estado5.lectura(VALOR5); // Lectura del sensor 5.
     }
-    estado_sensor_5 = 1;
+    estado_sensor_6 = 1;
     TiempoActual = millis(); // Variable que toma el tiempo actual.
     TiempoTranscurrido = TiempoActual - TiempoInicio; // Calculo de tiempo transucrrido entre la deteccion del objeto entre los dos sensores.
     TiempoInicio = 0;
     TiempoActual = 0;
     TiempoInicio = millis();
-    Serial.print("Tiempo transcurrido Tramo Inicial: ");
-    Serial.print(TiempoTranscurrido);
-    Serial.println(" ms");
+    //Serial.print("Tiempo transcurrido Tramo Inicial: ");
+    //Serial.print(TiempoTranscurrido);
+    //Serial.println(" ms");
     tiempo_3 = float(TiempoTranscurrido) / 1000; // Conversion de milisegundos a segundos.
     velocidad_3 = distancia_3 / tiempo_3; // Calculo de velocidad
-    Serial.print("La velocidad inicial es de: ");
-    Serial.print(velocidad_3);
-    Serial.println("cm/seg");
+    //Serial.print("La velocidad inicial es de: ");
+    //Serial.print(velocidad_3);
+    //Serial.println("cm/seg");
     //aceleracion_1=(velocidad_3-velocidad_2)/tiempo_3;
 
-    while (estado_sensor_5 == 1) { //Ciclo de espera mientras que se detecta algo en el quinto sensor.
-      estado_sensor_5 = estado5.lectura(VALOR5); // Lectura del sensor 5.
+    while (estado_sensor_6 == 1) { //Ciclo de espera mientras que se detecta algo en el quinto sensor.
+      estado_sensor_6 = estado6.lectura(VALOR6); // Lectura del sensor 6.
     }
-    estado_sensor_4 = 1;
+    estado_sensor_7 = 1;
     TiempoInicio = 0;
     TiempoActual = 0;
     TiempoTranscurrido = 0;
     TiempoInicio = millis();
-    while (estado_sensor_4 == 1) { //Ciclo de espera mientras que se detecta algo en el cuarto sensor.
-      estado_sensor_4 = estado4.lectura(VALOR4); // Lectura del sensor 4.
+    while (estado_sensor_7 == 1) { //Ciclo de espera mientras que se detecta algo en el cuarto sensor.
+      estado_sensor_7 = estado7.lectura(VALOR7); // Lectura del sensor 7.
     }
     TiempoActual = millis(); // Variable que toma el tiempo actual.
     TiempoTranscurrido = TiempoActual - TiempoInicio; // Calculo de tiempo transucrrido entre la deteccion del objeto entre los dos sensores.
     TiempoInicio = 0;
     TiempoActual = 0;
     TiempoInicio = millis();
-    Serial.print("Tiempo transcurrido Tramo Final: ");
-    Serial.print(TiempoTranscurrido);
-    Serial.println(" ms");
+    //Serial.print("Tiempo transcurrido Tramo Final: ");
+    //Serial.print(TiempoTranscurrido);
+    //Serial.println(" ms");
     tiempo_4 = float(TiempoTranscurrido) / 1000; // Conversion de milisegundos a segundos.
     velocidad_4 = distancia_4 / tiempo_4; // Calculo de velocidad
-    Serial.print("La velocidad final es de: ");
-    Serial.print(velocidad_4);
-    Serial.println("cm/seg");
+    //Serial.print("La velocidad final es de: ");
+    //Serial.print(velocidad_4);
+    //Serial.println("cm/seg");
     aceleracion_1 = (velocidad_4 - velocidad_3) / (tiempo_4 + tiempo_3);
-    Serial.print("La aceleracion es de: ");
-    Serial.print(aceleracion_1);
-    Serial.println("cm/seg^2");
+    //Serial.print("La aceleracion es de: ");
+    //Serial.print(aceleracion_1);
+    //Serial.println("cm/seg^2");
     lcd.clear();
     lcd.print("T1 = ");
     lcd.print(tiempo_3);
@@ -233,6 +213,28 @@ void loop() {
     lcd.print(aceleracion_1);
     lcd.print("m/s^2");
   }
+
+    //MOSTRANDO EN WEB 
+    boolean Key = false;
+    int mensaje = 0;
+    if (Serial.available() > 0) {
+      mensaje = Serial.read();
+      if (mensaje == '1') {
+        Key = true;
+      } else {
+        Key = false;
+      }
+    }
+    if (Key == true) {
+
+
+      Serial.println(tiempo_1);
+      Serial.println(tiempo_2);
+      //MOSTRAR SIGUIENTES VARIABLES
+      Serial.println(velocidad_1);
+      Serial.println(velocidad_2);
+
+    }
 
 }
 
