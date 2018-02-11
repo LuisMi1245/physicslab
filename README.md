@@ -79,11 +79,9 @@ MANUAL DE USO:
 
    Connection-specific DNS Suffix  . :
    
-   Link-local IPv6 Address . . . . . : fe80::b8d4:c525:2a8:c33b%11
+   Link-local IPv6 Address . . . . . : fe80::b8d4:c525:2a8:cklj9
    
-   IPv4 Address. . . . . . . . . . . : 192.168.0.12       <------- ESTA DIRECCIÓN DEBE TOMARLA Y PASARSELA A SUS COMPAÑEROS 
-   
-                                                                   PARA QUE LA DIGITEN EN EL NAVEGADOR DE SUS DISPOSITIVOS
+   IPv4 Address. . . . . . . . . . . : 192.168.0.12       <------- ESTA DIRECCIÓN DEBE TOMARLA Y PASARSELA A SUS COMPAÑEROS PARA QUE LA DIGITEN EN EL NAVEGADOR DE SUS DISPOSITIVOS
                                                                    
    Subnet Mask . . . . . . . . . . . : 255.255.255.0
    
