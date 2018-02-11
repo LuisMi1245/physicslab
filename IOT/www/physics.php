@@ -83,10 +83,32 @@ require 'lectura.php';
 <br>
 <br>
 
+<button data-target="modal1" class="btn modal-trigger green"/>Obtener Ayuda<i class="material-icons right">help</i></button>
+
 <button class="btn waves-effect waves-light green" id="miboton" type="button" onClick="Materialize.toast('Se han guardado correctamente', 4000)"/>Guardar Datos *<i class="material-icons right">send</i></button>
 
-<button class="btn waves-effect waves-light green left-align" id="miboton2" type="button" onClick="window.location.href='physicsdev.php'"/>Hacer Conversión<i class="material-icons right">autorenew</i></button>
+<button class="btn waves-effect waves-light green" id="miboton2" type="button" onClick="window.location.href='physicsdev.php'"/>Hacer Conversión<i class="material-icons right">autorenew</i></button>
 <div id="carga"> </div>
+
+
+
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+<div class="modal-content">
+<h4>¿Cómo es el proceso?</h4>
+<p>A partir de magnitudes como las de "tiempo", que se obtienen gracias a los pares de sensores infrarojo, podremos hacer su debido cálculo, y así obtener otras magnitudes como la velocidad o aceleración, por ejemplo.</p>
+<p>Para llevar a cabo este proceso, usted debe cersiorarse de obtener los datos del Arduino, y OBLIGATORIAMENTE, presionar el botón:
+</p>
+<button class="btn waves-effect waves-light green"/>Guardar Datos *<i class="material-icons right">send</i></button>
+<p>
+De lo contrario, si no lo hace, al momento de presionar "HACER CONVERSION", no aparecerá ningún dato.
+</p>
+</div>
+<div class="modal-footer">
+<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Entiendo</a>
+</div>
+</div>
     
     <div class="green">
       <br>
@@ -156,7 +178,7 @@ require 'lectura.php';
                 </p>
               </div>
               <div class="card-action">
-                <a href="#">Generar magnitudes derivadas (Velocidad y aceleración)</a>
+                <a href="physicsdev.php">Generar magnitudes derivadas (Velocidad y aceleración)</a>
               </div>
             </div>
           </div>
@@ -168,9 +190,9 @@ require 'lectura.php';
         <div class="container">
           <div class="row">
             <div class="col l6 s12">
-              <h5 class="white-text">Laboratorio de física.<br>(Creative Commons)</h5>
-              <p class="grey-text text-lighten-4">Derechos de autor: (CC) VicmanMakers 2018.</p>
-              <p>Cualquier contenido asociado a la plataforma PhysicslAB, se atribuyen respectivamente los derechos de autor correspondientes a los desarrolladores del contenido y plataforma.</p>
+              <h5 class="white-text">Laboratorio de física.<br>(Open Source)</h5>
+              <p class="grey-text text-lighten-4">Autor: by VicmanMakers and CreatorslAB 2018 .</p>
+              <p>Cualquier contenido asociado al aplicativo PhysicslAB (imagenes, textos, material audiovisual, son usados con fines netamente educativos y se atribuyen respectivamente los derechos de autor correspondientes a los desarrolladores del contenido.</p>
             </div>
             <div class="col l4 offset-l2 s12">
               <h5 class="white-text">Links</h5>
@@ -207,5 +229,10 @@ require 'lectura.php';
         menuWidth: 280,
       });
 </script>
+<script>
+       $(document).ready(function() {
+    $('.modal').modal();
+    });
+    </script>
   </body>
   </html>

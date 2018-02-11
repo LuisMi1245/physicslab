@@ -119,32 +119,32 @@ echo '<p>Se han eliminado correctamente los registros de la base de datos. <i cl
 
   </div>
 
-  <footer class="page-footer green">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Laboratorio de física.<br>(Creative Commons)</h5>
-          <p class="grey-text text-lighten-4">Derechos de autor: (CC) VicmanMakers 2018.</p>
-          <p>Cualquier contenido asociado a la plataforma PhysicslAB, se atribuyen respectivamente los derechos de autor correspondientes a los desarrolladores del contenido y plataforma.</p>
+       <footer class="page-footer green">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">Laboratorio de física.<br>(Open Source)</h5>
+              <p class="grey-text text-lighten-4">Autor: by VicmanMakers and CreatorslAB 2018 .</p>
+              <p>Cualquier contenido asociado al aplicativo PhysicslAB (imagenes, textos, material audiovisual, son usados con fines netamente educativos y se atribuyen respectivamente los derechos de autor correspondientes a los desarrolladores del contenido.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="white-text">Links</h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="#!">Facebook</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Twitter</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Whatsapp</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Instragram</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Links</h5>
-          <ul>
-            <li><a class="grey-text text-lighten-3" href="#!">Facebook</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Twitter</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Whatsapp</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Instragram</a></li>
-          </ul>
+        <div class="footer-copyright">
+          <div class="container">
+            2018 (CC) VicmanMakers
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-        2018 (CC) VicmanMakers
-        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-      </div>
-    </div>
-  </footer>
+      </footer>
   
 
   <script src="js/jquery.js"></script>

@@ -56,13 +56,6 @@
   </nav>
   <br>
 
-
-
-  <ul class="collapsible" data-collapsible="accordion">
-    <li>
-      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Velocidades:</div>
-      <div class="collapsible-body">
-
         <!-- Physics lab proceso -->
         <table class="highlight centered responsive-table flow-text white">
           <thead class="z-depth-2">
@@ -74,75 +67,36 @@
             </tr>
           </thead>
           <tbody>
-
-            <?php 
-            require 'fisicalab/funciones.php';
-            require 'fisicalab/Conexion.php';
-            
-            $conexion = new Conexion();
-            $cnn = $conexion->getConexion();
-            $sql = "SELECT * FROM datos";
-            $statement = $cnn->query($sql); 
-            $valor = $statement->execute();
-           
-                while($consulta = $statement->fetch(PDO::FETCH_ASSOC)){
-                    
-                    $resultado['0'] = $consulta['Sensor'];
-                  
-                    /*
-                    $resultado['1'] = $consulta['Dato'];
-                    $resultado['2'] = $consulta['Magnitud'];
-                    $resultado['3'] = $consulta['Fecha']; */
-                }
-           echo $resultado['0'];
-           
-                /*
-          $Sensor = $row['Sensor'];
-                        $Dato = $row['Dato'];
-                        $Magnitud = $row['Magnitud'];
-                        $Fecha = $row['Fecha'];
-
-
-                    echo '</tr>';
-                    echo '<td>'.$Sensor.'</td>';
-                    echo '<td>'.$Dato[$i].'</td>';  
-                    echo '<td>'.$Magnitud[$i].'</td>';
-                    echo '<td>'.$Fecha[$i].'</td>';
-                    echo '</tr>';   
-                }*/
-            include("fisicalab/cerrar_conexion.php");
-            ?>
+          <?php require 'fisicalab/exp_velocidad.php'; ?>
           </tbody>
         </table>
-
-      </div>
-    </li>
-
-
-    <li>
-      <div class="collapsible-header"><i class="material-icons">place</i>Aceleración:</div>
-
-      <div class="collapsible-body">
-        <!-- Physics lab proceso -->
-        <table class="highlight centered responsive-table flow-text white">
-          <thead class="z-depth-2">
-            <tr>
-              <th style="font-size: 18px">Datos</th>
-              <th style="font-size: 18px">Magnitud</th>
-              <th style="font-size: 18px">Sensor</th>
-              <th style="font-size: 18px">Fecha</th>
-            </tr>
-          </thead>
-          <tbody>
-           
-          </tbody>
-        </table>
-     </div>
-    </li>
-
-  </ul>
-
     <br>
+     <blockquote class="flow-text">
+     Aceleración del objeto = <?php include('fisicalab/exp_aceleracion.php'); ?>  m/s°2 
+     </blockquote>
+
+    <button class="btn waves-effect waves-light green" id="miboton2" type="button" onClick="window.location.href='physics.php'"/>Repetir experimento<i class="material-icons right">autorenew</i></button>
+
+    <button data-target="modal1" class="btn modal-trigger green"/>Obtener Ayuda<i class="material-icons right">help</i></button>
+
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+    <div class="modal-content">
+    <h4>¿Cómo es el proceso?</h4>
+    <p>A partir de magnitudes como las de "tiempo", y las distancias, determinamos las respectivas velocidades, y luego, a travéz de la formula de la aceleración:</p>    
+    <img src="images/aceleracion.jpg">
+    <p>
+    Obtenemos la aceleración del objeto, siendo así velocidad 4 y 3, tiempo 4 y 3, los que determinan su aceleración.
+    </p>
+    </div>
+    <div class="modal-footer">
+    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Entiendo</a>
+    </div>
+    </div>
+        
+
+
     <div class="green">
     <br>
     <div class="container">
@@ -162,7 +116,7 @@
               </ul>
             </div>
             <div class="card-action">
-              <a href="physicsdev.php">Generar magnitudes derivadas (Velocidad y aceleración)</a>
+              <a href="physics.php">REPETIR EXPERIMENTO (MENÚ PRINCIPAL)</a>
             </div>
           </div>
         </div>
@@ -207,22 +161,19 @@
               </p>
             </div>
             <div class="card-action">
-              <a href="#">Generar magnitudes derivadas (Velocidad y aceleración)</a>
+              <a href="physics.php">REPETIR EXPERIMENTO (MENÚ PRINCIPAL)</a>
             </div>
           </div>
         </div>
       </div>
 
-
-
-
       <footer class="page-footer green">
         <div class="container">
           <div class="row">
             <div class="col l6 s12">
-              <h5 class="white-text">Laboratorio de física.<br>(Creative Commons)</h5>
-              <p class="grey-text text-lighten-4">Derechos de autor: © VicmanMakers 2018.</p>
-              <p>Cualquier contenido asociado a la plataforma PhysicslAB, se atribuyen respectivamente los derechos de autor correspondientes a los desarrolladores del contenido y plataforma.</p>
+              <h5 class="white-text">Laboratorio de física.<br>(Open Source)</h5>
+              <p class="grey-text text-lighten-4">Autor: by VicmanMakers and CreatorslAB 2018 .</p>
+              <p>Cualquier contenido asociado al aplicativo PhysicslAB (imagenes, textos, material audiovisual, son usados con fines netamente educativos y se atribuyen respectivamente los derechos de autor correspondientes a los desarrolladores del contenido.</p>
             </div>
             <div class="col l4 offset-l2 s12">
               <h5 class="white-text">Links</h5>
@@ -237,7 +188,7 @@
         </div>
         <div class="footer-copyright">
           <div class="container">
-            © 2018 Copyright VicmanMakers
+            2018 (CC) VicmanMakers
             <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
           </div>
         </div>
@@ -254,6 +205,11 @@
       $(document).ready(function() {
         $('.collapsible').collapsible();
       });
+    </script>
+    <script> 
+     $(document).ready(function() {
+    $('.modal').modal();
+    });
     </script>
 </body>
 </html>

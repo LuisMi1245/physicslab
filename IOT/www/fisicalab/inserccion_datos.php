@@ -3,6 +3,11 @@ require 'Conexion.php'; //Agregamos la conexión
 require 'Classes/PHPExcel/IOFactory.php'; //Agregamos la librería
 include 'funciones.php';
 
+$sql = "TRUNCATE TABLE datos";   
+$conexion = new Conexion();
+$cnn = $conexion->getConexion();
+$statement = $cnn->query($sql); 
+
 $nombreArchivo = 'datos.xlsx';
 // Cargo la hoja de cálculo
 $objPHPExcel = PHPExcel_IOFactory::load($nombreArchivo);
