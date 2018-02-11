@@ -84,14 +84,23 @@ MANUAL DE USO:
    Subnet Mask . . . . . . . . . . . : 255.255.255.0
    Default Gateway . . . . . . . . . : 192.168.0.1
 
+
 Nota: Si a sus compañeros no les aparece, es porque no realizó bien el paso #4 del Proceso#1 .
+
 3. Abra el NetBeans y ejecute el archivo "Windows.java".
+
 4. Ejecute el ejercicio de física. 
+
 5. Presiones el botón "obtener datos" en la ventanita del código de Java.
+
 6. Los datos aparecerán ordenadamente, y usted le dará al botón "Exportar a Excel".
+
 Nota: Recuerde que el archivo por obligación debe llamarse "datos" y su extensión debe ser ".xlsx".
+
 7. Dirijase a la plataforma web, y observe como sus datos ya aparecen en las tablas.
+
 8. Presione el botón "GUARDAR DATOS*" y luego a "HACER CONVERSIÓN" para obtener las magnitudes derivadas.
+
 9. Repita el proceso, omitiendo el paso 1, 2 y 3. Para obtener nuevos datos.
 
 
