@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
   <link href="fonts/icons/MaterialIcons-Regular.woff" rel="stylesheet">
@@ -56,48 +57,49 @@
   </nav>
   <br>
 
-        <!-- Physics lab proceso -->
-        <table class="highlight centered responsive-table flow-text white">
-          <thead class="z-depth-2">
-            <tr>
-              <th style="font-size: 18px">Datos</th>
-              <th style="font-size: 18px">Magnitud</th>
-              <th style="font-size: 18px">Sensor</th>
-              <th style="font-size: 18px">Fecha</th>
-            </tr>
-          </thead>
-          <tbody>
-          <?php require 'fisicalab/exp_velocidad.php'; ?>
-          </tbody>
-        </table>
-    <br>
-     <blockquote class="flow-text">
-     Aceleración del objeto = <?php include('fisicalab/exp_aceleracion.php'); ?>  m/s°2 
-     </blockquote>
+  <!-- Physics lab proceso -->
+  <table class="highlight centered responsive-table flow-text white">
+    <thead class="z-depth-2">
+      <tr>
+        <th style="font-size: 18px">Datos</th>
+        <th style="font-size: 18px">Magnitud</th>
+        <th style="font-size: 18px">Sensor</th>
+        <th style="font-size: 18px">Fecha</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php require 'fisicalab/exp_velocidad.php'; ?>
+    </tbody>
+  </table>
+  <br>
+  <blockquote class="flow-text">
+    Aceleración del objeto =
+    <?php include('fisicalab/exp_aceleracion.php'); ?> m/s°2
+  </blockquote>
 
-    <button class="btn waves-effect waves-light green" id="miboton2" type="button" onClick="window.location.href='physics.php'"/>Repetir experimento<i class="material-icons right">autorenew</i></button>
+  <button class="btn waves-effect waves-light green" id="miboton2" type="button" onClick="window.location.href='physics.php'" />Repetir experimento<i class="material-icons right">autorenew</i></button>
 
-    <button data-target="modal1" class="btn modal-trigger green"/>Obtener Ayuda<i class="material-icons right">help</i></button>
+  <button data-target="modal1" class="btn modal-trigger green" />Obtener Ayuda<i class="material-icons right">help</i></button>
 
 
-    <!-- Modal Structure -->
-    <div id="modal1" class="modal">
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
     <div class="modal-content">
-    <h4>¿Cómo es el proceso?</h4>
-    <p>A partir de magnitudes como las de "tiempo", y las distancias, determinamos las respectivas velocidades, y luego, a travéz de la formula de la aceleración:</p>    
-    <img src="images/aceleracion.jpg">
-    <p>
-    Obtenemos la aceleración del objeto, siendo así velocidad 4 y 3, tiempo 4 y 3, los que determinan su aceleración.
-    </p>
+      <h4>¿Cómo es el proceso?</h4>
+      <p>A partir de magnitudes como las de "tiempo", y las distancias, determinamos las respectivas velocidades, y luego, a travéz de la formula de la aceleración:</p>
+      <img src="images/aceleracion.jpg">
+      <p>
+        Obtenemos la aceleración del objeto, siendo así velocidad 4 y 3, tiempo 4 y 3, los que determinan su aceleración.
+      </p>
     </div>
     <div class="modal-footer">
-    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Entiendo</a>
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Entiendo</a>
     </div>
-    </div>
-        
+  </div>
 
 
-    <div class="green">
+
+  <div class="green">
     <br>
     <div class="container">
       <div class="row">
@@ -206,10 +208,11 @@
         $('.collapsible').collapsible();
       });
     </script>
-    <script> 
-     $(document).ready(function() {
-    $('.modal').modal();
-    });
+    <script>
+      $(document).ready(function() {
+        $('.modal').modal();
+      });
     </script>
 </body>
+
 </html>

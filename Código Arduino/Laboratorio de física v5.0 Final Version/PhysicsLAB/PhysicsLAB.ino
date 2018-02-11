@@ -1,5 +1,5 @@
 //Se incluyen las líbrerias que contienen las funciones necesarias para el proceso.
-#include <infrarrojo.h> 
+#include <infrarrojo.h>
 #include <LiquidCrystal_I2C.h> 
 #include <Wire.h>
 
@@ -214,25 +214,24 @@ void loop() {
     lcd.print("m/s^2");
   }
 
-    //MOSTRANDO EN WEB 
-    boolean Key = false;
-    int mensaje = 0;
-    if (Serial.available() > 0) {
-      mensaje = Serial.read();
-      if (mensaje == '1') {
-        Key = true;
-      } else {
-        Key = false;
-        println("Llave falsa.");
-      }
+  //MOSTRANDO EN WEB 
+  boolean Key = false;
+  int mensaje = 0;
+  if (Serial.available() > 0) {
+    mensaje = Serial.read();
+    if (mensaje == '1') {
+      Key = true;
+    } else {
+      Key = false;
+      println("Llave falsa.");
     }
-    if (Key == true) {
-      Serial.println(tiempo_1);
-      Serial.println(tiempo_2);
-      Serial.println(tiempo_3);
-      Serial.println(tiempo_4);
+  }
+  if (Key == true) {
+    Serial.println(tiempo_1);
+    Serial.println(tiempo_2);
+    Serial.println(tiempo_3);
+    Serial.println(tiempo_4);
 
-    }
+  }
 
 }
-
