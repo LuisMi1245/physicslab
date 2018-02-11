@@ -56,6 +56,8 @@
   </nav>
   <br>
 
+
+
   <ul class="collapsible" data-collapsible="accordion">
     <li>
       <div class="collapsible-header"><i class="material-icons">filter_drama</i>Velocidades:</div>
@@ -72,15 +74,72 @@
             </tr>
           </thead>
           <tbody>
-          <?php require 'fisicalab/query_exp_2.php';?>
+
+            <?php 
+            require 'fisicalab/funciones.php';
+            require 'fisicalab/Conexion.php';
+            
+            $conexion = new Conexion();
+            $cnn = $conexion->getConexion();
+            $sql = "SELECT * FROM datos";
+            $statement = $cnn->query($sql); 
+            $valor = $statement->execute();
+           
+                while($consulta = $statement->fetch(PDO::FETCH_ASSOC)){
+                    
+                    $resultado['0'] = $consulta['Sensor'];
+                  
+                    /*
+                    $resultado['1'] = $consulta['Dato'];
+                    $resultado['2'] = $consulta['Magnitud'];
+                    $resultado['3'] = $consulta['Fecha']; */
+                }
+           echo $resultado['0'];
+           
+                /*
+          $Sensor = $row['Sensor'];
+                        $Dato = $row['Dato'];
+                        $Magnitud = $row['Magnitud'];
+                        $Fecha = $row['Fecha'];
+
+
+                    echo '</tr>';
+                    echo '<td>'.$Sensor.'</td>';
+                    echo '<td>'.$Dato[$i].'</td>';  
+                    echo '<td>'.$Magnitud[$i].'</td>';
+                    echo '<td>'.$Fecha[$i].'</td>';
+                    echo '</tr>';   
+                }*/
+            include("fisicalab/cerrar_conexion.php");
+            ?>
           </tbody>
         </table>
+
       </div>
     </li>
+
+
     <li>
       <div class="collapsible-header"><i class="material-icons">place</i>Aceleración:</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+
+      <div class="collapsible-body">
+        <!-- Physics lab proceso -->
+        <table class="highlight centered responsive-table flow-text white">
+          <thead class="z-depth-2">
+            <tr>
+              <th style="font-size: 18px">Datos</th>
+              <th style="font-size: 18px">Magnitud</th>
+              <th style="font-size: 18px">Sensor</th>
+              <th style="font-size: 18px">Fecha</th>
+            </tr>
+          </thead>
+          <tbody>
+           
+          </tbody>
+        </table>
+     </div>
     </li>
+
   </ul>
 
     <br>

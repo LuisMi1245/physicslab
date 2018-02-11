@@ -223,16 +223,14 @@ void loop() {
         Key = true;
       } else {
         Key = false;
+        println("Llave falsa.");
       }
     }
     if (Key == true) {
-
-
       Serial.println(tiempo_1);
       Serial.println(tiempo_2);
-      //MOSTRAR SIGUIENTES VARIABLES
-      Serial.println(velocidad_1);
-      Serial.println(velocidad_2);
+      Serial.println(tiempo_3);
+      Serial.println(tiempo_4);
 
     }
 

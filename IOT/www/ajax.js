@@ -1,6 +1,6 @@
 //$(function(){listar();});
 function listar(){
-_ajax("fisicalab/datos_servidor.php", "")
+_ajax("fisicalab/query_exp_2.php", "")
 .done(function(info){
     var datos = JSON.parse(info); 
     var html = "";

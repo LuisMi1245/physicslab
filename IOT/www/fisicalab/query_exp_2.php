@@ -1,7 +1,6 @@
-<?php
-require 'funciones.php';
-require 'Conexion.php';
 
+
+/*
 $res = mysqli_query($conexion,"SELECT*FROM datos  WHERE Sensor='Infra_1_2'") or die(mysqli_error()); 
 while ($consulta = mysqli_fetch_array($res)) {  
 $rows['0'] = $consulta['Dato'];
@@ -55,6 +54,4 @@ echo '<td>'.$sensor[$i].'</td>';
 echo '<td>'. $time = date("H:i a - j M").'</td>';
 echo '</tr>';
 }
-
-include("cerrar_conexion.php");
-?>
+*/
