@@ -25,7 +25,7 @@ public class Windows extends javax.swing.JFrame {
     
    public void TableUpdate(){
        
-       Modelo.addRow(new Object[]{"",time_1 , time_2, ""});
+       Modelo.addRow(new Object[]{"",time_1 , time_2, time_3, time_4, ""});
        //System.out.println("Tiempo 1:" +time_1+ " Tiempo 2:" + time_2);       
    }
     public Windows() {
@@ -46,8 +46,8 @@ public class Windows extends javax.swing.JFrame {
     int Slot=1;
     float time_1;
     float time_2;
-    float vel_1;
-    float vel_2;
+    float time_3;
+    float time_4;
     int Lecturas=0;
     
     
@@ -106,8 +106,11 @@ try{
               case 3:
                   Slot=2;
                   Lecturas++;
-                  vel_1 = Float.parseFloat(Arduino.PrintMessage());
+                  time_3 = Float.parseFloat(Arduino.PrintMessage());
                   break;
+              case 4:
+                  Slot=1;
+                  time_4 = Float.parseFloat(Arduino.PrintMessage());
               default:
                   break;
           }
@@ -132,7 +135,7 @@ try{
 
             },
             new String [] {
-                "Hora", "Tiempo 1", "Tiempo 2", "Velocidad 1", "Velocidad 2"
+                "Tiempo 1", "Tiempo 2", "Tiempo 3", "Tiempo 4"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -206,7 +209,7 @@ try{
 
         javax.swing.JFileChooser ventana = new javax.swing.JFileChooser();
         String ruta;
-        ruta = "C:\\xampp\\htdocs\\dashboard\\www";
+        ruta = "C:\\xampp\\htdocs\\physicslab\\IOT\\www\\fisicalab\\";
         try {
             if (ventana.showSaveDialog(null) == JFileChooser.APPROVE_OPTION) {
                 ruta = ventana.getSelectedFile().getAbsolutePath() + ".xlsx";
