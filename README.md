@@ -3,7 +3,7 @@ Este trabajo ha sido realizado netamente por 2 estudiantes de grado 11 (once) en
 - Institución Educativa Cristobal Colón.
 - Institución Educativa Victoria Manzur.
 
-Nos hemos esforzado bastante para optimizar la instalación el proyecto como tal, tenemos conocimientos intermedios en temas computacionales, por favor, valorar el esfuerzo con comentarios y críticas constructivas.
+Nos hemos esforzado bastante para optimizar la instalación del proyecto como tal, tenemos conocimientos intermedios en temas computacionales, por favor, valorar el esfuerzo con comentarios y críticas constructivas.
 
 
 Requisitos para instalar el laboratorio de física:
