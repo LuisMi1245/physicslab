@@ -84,10 +84,12 @@
   <div class="green">
   <div class="row">
   
+  <button data-target="modal1" class="btn modal-trigger green col s12" />Obtener Ayuda<i class="material-icons right">help</i></button>
+
+
   <button class="btn waves-effect waves-light green col s12" id="miboton2" type="button" onClick="window.location.href='physics.php'" />Repetir experimento<i class="material-icons right">autorenew</i></button>
 
-  <button data-target="modal1" class="btn modal-trigger green col s12" />Obtener Ayuda<i class="material-icons right">help</i></button>
-</div>  
+  </div>  
   <!-- Modal Structure -->
   <div id="modal1" class="modal">
     <div class="modal-content">
@@ -102,7 +104,7 @@
       <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Entiendo</a>
     </div>
   </div>
-<br>
+
 
     <div class="container">
       <div class="row">
@@ -171,15 +173,17 @@
           </div>
         </div>
       </div>
-
-      <footer class="page-footer green">
-        <div class="container">
+    </div>
+ 
+    <footer class="page-footer green">
+      <div class="container">
           <div class="row">
             <div class="col l6 s12">
               <h5 class="white-text">Laboratorio de física.<br>(Open Source)</h5>
               <p class="grey-text text-lighten-4">Autor: by VicmanMakers and CreatorslAB 2018 .</p>
               <p>Cualquier contenido asociado al aplicativo PhysicslAB (imagenes, textos, material audiovisual, son usados con fines netamente educativos y se atribuyen respectivamente los derechos de autor correspondientes a los desarrolladores del contenido.</p>
             </div>
+            
             <div class="col l4 offset-l2 s12">
               <h5 class="white-text">Links</h5>
               <ul>
@@ -189,8 +193,8 @@
                 <li><a class="grey-text text-lighten-3" href="#!">Instragram</a></li>
               </ul>
             </div>
+            </div>
           </div>
-        </div>
         <div class="footer-copyright">
           <div class="container">
             2018 (CC) VicmanMakers
@@ -200,7 +204,7 @@
       </footer>
 
 
-    </div>
+    
     <script src="js/jquery.js"></script>
     <script src="js/materialize.min.js"></script>
     <script>
