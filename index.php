@@ -5,7 +5,7 @@
 		$uri = 'http://';
 	}
 	$uri .= $_SERVER['HTTP_HOST'];
-	header('Location: '.$uri.'physicslab/IOT/www/physics.php');
+	header('Location: '.$uri.'/physicslab/IOT/www/physics.php');
 	exit;
 ?>
 Something is wrong with the XAMPP installation :-(
