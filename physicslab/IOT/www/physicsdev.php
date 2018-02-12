@@ -68,20 +68,26 @@
       </tr>
     </thead>
     <tbody>
-      <?php require 'fisicalab/exp_velocidad.php'; ?>
+      <?php require 'verificar_db.php'; ?>
     </tbody>
   </table>
   <br>
   <blockquote class="flow-text">
     Aceleración del objeto =
-    <?php include('fisicalab/exp_aceleracion.php'); ?> m/s°2
+    <?php 
+    include('fisicalab/exp_aceleracion.php');
+   ?>
+   m/s°2
   </blockquote>
 
-  <button class="btn waves-effect waves-light green" id="miboton2" type="button" onClick="window.location.href='physics.php'" />Repetir experimento<i class="material-icons right">autorenew</i></button>
 
-  <button data-target="modal1" class="btn modal-trigger green" />Obtener Ayuda<i class="material-icons right">help</i></button>
+  <div class="green">
+  <div class="row">
+  
+  <button class="btn waves-effect waves-light green col s12" id="miboton2" type="button" onClick="window.location.href='physics.php'" />Repetir experimento<i class="material-icons right">autorenew</i></button>
 
-
+  <button data-target="modal1" class="btn modal-trigger green col s12" />Obtener Ayuda<i class="material-icons right">help</i></button>
+</div>  
   <!-- Modal Structure -->
   <div id="modal1" class="modal">
     <div class="modal-content">
@@ -96,11 +102,8 @@
       <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Entiendo</a>
     </div>
   </div>
+<br>
 
-
-
-  <div class="green">
-    <br>
     <div class="container">
       <div class="row">
         <div class="z-depth-2">

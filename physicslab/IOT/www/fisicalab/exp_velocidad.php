@@ -1,5 +1,5 @@
 <?php 
-            require 'fisicalab/Conexion.php';
+            
             
             $distancia = array(0.30,0.43,0.26,0.25);
             $Sensor = array("Infra_1_2","Infra_2_3","Infra_3_4","Infra_4_5");
@@ -15,9 +15,13 @@
             $fechaSQL = "SELECT Fecha FROM datos";
             $stmt = $cnn->query($fechaSQL);
             $statement = $cnn->query($sql);
+            $st = $cnn->query($sql);
             $valorFecha = $statement->execute(); 
             $valor = $statement->execute();
-       
+
+          
+          
+      
             while($row = $stmt->fetchAll(PDO::FETCH_COLUMN)){
                 for($i = 0; $i < 4; $i++){
                 $fecha[$i] = $row[$i];
@@ -46,5 +50,7 @@
                 echo '</tr>';   
                 }
             
+            
             include("fisicalab/cerrar_conexion.php");
+        
             ?>

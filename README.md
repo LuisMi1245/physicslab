@@ -11,7 +11,7 @@ Requisitos para instalar el laboratorio de física:
 (Windows 7, 8, 8.1 y 10 de 64 o 32 bits)
 
 1. Tener o instalar apache, mysql, mariadb (Xampp, Lampp, Wampp).
----> www.wampserver.com/en/
+---> https://www.apachefriends.org/es/download.html
 2. Tener o instalar el entorno de desarrollo NeatBeans (Compatible con Java).
 ---> https://netbeans.org/downloads/
 3. Tener o instalar el Jre (Java Runtime Environment)

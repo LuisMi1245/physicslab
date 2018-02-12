@@ -83,35 +83,39 @@ require 'lectura.php';
   <br>
   <br>
 
-  <button data-target="modal1" class="btn modal-trigger green" />Obtener Ayuda<i class="material-icons right">help</i></button>
+<div class="green">
+<div class="row">
+  <button data-target="modal1" class="btn modal-trigger waves-effect waves-light green col s12" />Obtener Ayuda<i class="material-icons right">help</i></button>
 
-  <button class="btn waves-effect waves-light green" id="miboton" type="button" onClick="Materialize.toast('Se han guardado correctamente', 4000)" />Guardar Datos *<i class="material-icons right">send</i></button>
+  <button class="btn waves-effect waves-light green col s12 " id="miboton" type="button" onClick="Materialize.toast('Se han guardado correctamente', 4000)" />GUARDAR DATOS *<i class="material-icons right">send</i></button>
 
-  <button class="btn waves-effect waves-light green" id="miboton2" type="button" onClick="window.location.href='physicsdev.php'" />Hacer Conversión<i class="material-icons right">autorenew</i></button>
+  <button class="btn waves-effect waves-light green col s12 " id="miboton2" type="button" onClick="window.location.href='physicsdev.php'" />HACER CONVERSIÓN<i class="material-icons right">autorenew</i></button>
   <div id="carga"> </div>
-
+  </div>
 
 
 
   <!-- Modal Structure -->
   <div id="modal1" class="modal">
     <div class="modal-content">
-      <h4>¿Cómo es el proceso?</h4>
-      <p>A partir de magnitudes como las de "tiempo", que se obtienen gracias a los pares de sensores infrarojo, podremos hacer su debido cálculo, y así obtener otras magnitudes como la velocidad o aceleración, por ejemplo.</p>
+      <h4>Instrucciones</h4>
+      <p>A partir de magnitudes como las de "tiempo", que se obtienen gracias a los pares de sensores infrarojo, podremos hacer su debido cálculo, y así obtener otras magnitudes como la velocidad o aceleración.</p>
       <p>Para llevar a cabo este proceso, usted debe cersiorarse de obtener los datos del Arduino, y OBLIGATORIAMENTE, presionar el botón:
       </p>
-      <button class="btn waves-effect waves-light green" />Guardar Datos *<i class="material-icons right">send</i></button>
+      <button class="btn waves-effect waves-light green" />GUARDAR DATOS *<i class="material-icons right">send</i></button>
       <p>
-        De lo contrario, si no lo hace, al momento de presionar "HACER CONVERSION", no aparecerá ningún dato.
+        De lo contrario, si no lo hace, al momento de presionar:
       </p>
+        <button class="btn waves-effect waves-light green" />HACER CONVERSIÓN<i class="material-icons right">autorenew</i></button>
+<p>
+No aparecerá ningún dato o salte un error en pantalla.
+</p>
     </div>
     <div class="modal-footer">
       <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Entiendo</a>
     </div>
   </div>
-
-  <div class="green">
-    <br>
+    
 
     <div class="container ">
       <div class="row">
