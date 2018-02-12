@@ -2,12 +2,16 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="css/icons.css">
+  <link href="fonts/icons/MaterialIcons-Regular.woff" rel="stylesheet">
+  <link href="fonts/icons/MaterialIcons-Regular.woff2" rel="stylesheet">
+  <link href="css/icons.css" rel="stylesheet">
   <link rel="stylesheet" href="css/materialize.min.css">
-  <title>Laboratorio de física</title>
-  <meta name="viewport" content=" width = device-width, initial-scale = 1.0" />
+  <meta charset=utf-8>
+  <meta name=description content="">
+  <meta name=viewport content="width=device-width, initial-scale=1">
   <script src="js/jquery.js"></script>
   <script src="refresh_ajax.js"></script>
+  <title>Laboratorio de física</title> 
 </head>
 
 <body>
@@ -25,9 +29,7 @@
       </ul>
 
 
-      <div class="row">
-        <div class="col s12">
-
+  
           <ul id="slide-out" class="side-nav">
             <li>
               <div class="user-view">
@@ -40,11 +42,10 @@
               </div>
             </li>
             <li><a href="physicsdev.php">Hacer conversión</a></li>
-            <li><a class="waves-effect" href="#!">Actividades propuestas</a></li>
             <li>
               <div class="divider"></div>
             </li>
-            <li><a class="subheader">Síganos</a></li>
+            <li><a class="subheader">Configuración</a></li>
             <li><a href="acerca_de_nosotros.html"><i class="material-icons">account_circle</i>Acerca de nosotros</a></li>
             <li><a href="proyecto.html"><i class="material-icons">book</i>Proyecto PhysicslAB</a></li>
             <li><a href="partcipantes.html"><i class="material-icons">face</i>Participantes</a></li>
@@ -55,9 +56,7 @@
           <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
         </div>
   </nav>
-  </div>
-  </div>
-
+ 
 
 
   <!--PhysicslAB Btón-->

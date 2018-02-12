@@ -41,11 +41,11 @@
           </div>
         </li>
         <li><a href="physics.php">Menú principal</a></li>
-        <li><a class="waves-effect" href="#!">Actividades propuestas</a></li>
+     
         <li>
           <div class="divider"></div>
         </li>
-        <li><a class="subheader">Síganos</a></li>
+        <li><a class="subheader">Configuración</a></li>
         <li><a href="acerca_de_nosotros.html"><i class="material-icons">account_circle</i>Acerca de nosotros</a></li>
             <li><a href="proyecto.html"><i class="material-icons">book</i>Proyecto PhysicslAB</a></li>
             <li><a href="partcipantes.html"><i class="material-icons">face</i>Participantes</a></li>
