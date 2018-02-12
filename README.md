@@ -3,7 +3,7 @@ Este trabajo ha sido realizado netamente por 2 estudiantes de grado 11 (once) en
 - Institución Educativa Cristobal Colón.
 - Institución Educativa Victoria Manzur.
 
-Nos hemos esforzado bastante para optimizar la instalación el proyecto como tal, tenemos conocimientos intermedios en temas computacionales, por favor, valorar el esfuerzo con comentarios y críticas constructivas.
+Nos hemos esforzado bastante para optimizar la instalación del proyecto como tal, tenemos conocimientos intermedios en temas computacionales, por favor, valorar el esfuerzo con comentarios y críticas constructivas.
 
 
 Requisitos para instalar el laboratorio de física:
@@ -89,7 +89,10 @@ MANUAL DE USO:
    Default Gateway . . . . . . . . . : 192.168.0.1
 
 
-Nota: Si a sus compañeros no les aparece, es porque no realizó bien el paso #4 del Proceso#1 .
+Nota: Si a sus compañeros no les aparece, es porque no realizó bien el paso #4 del Proceso#1 . 
+O porque simplemente no se encuentra conectado a la red de WiFi en la que sus compañeros están. 
+Clave: La computadora en donde se almacena el proyecto, debe estar por obligacion, conectado a la red en donde están los demás.
+Solo se requiere un enrutador, modem, o punto de acceso (acces point AP) con o sin acceso a internet. 
 
 3. Abra el NetBeans y ejecute el archivo "Windows.java".
 
