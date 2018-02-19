@@ -109,8 +109,12 @@ $sql = "TRUNCATE TABLE datos";
 $conexion = new Conexion();
 $cnn = $conexion->getConexion();
 $statement = $cnn->query($sql); 
+$sql = "DROP DATABASE lectura_exclec";
+$conexion = new Conexion();
+$cnn = $conexion->getConexion();
+$statement = $cnn->query($sql);
 require 'fisicalab/cerrar_conexion.php';
-echo '<p>Se han eliminado correctamente los registros de la base de datos. <i class="material-icons">check</i></p>';
+echo '<p>Se han eliminado los registros. Instale nuevamente la base de datos. <i class="material-icons">check</i></p>';
 }else{
     echo '<p>Contraseña incorrecta <i class="material-icons">close</i></p>';
 }}
